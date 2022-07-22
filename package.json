@@ -1,0 +1,34 @@
+{
+  "name": "eslint-config-vamp",
+  "version": "1.0.0",
+  "description": "ESLint config for vampires 🩸",
+  "keywords": [
+    "eslint",
+    "conifg",
+    "eslintconfig",
+    "eslint-config",
+    "eslint-config-vamp",
+    "javascript",
+    "typescript",
+    "best-practices"
+  ],
+  "homepage": "https://github.com/avivharuzi/eslint-config-vamp#readme",
+  "bugs": {
+    "url": "https://github.com/avivharuzi/eslint-config-vamp/issues",
+    "email": "avivharuzi@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Aviv Haruzi",
+    "email": "avivharuzi@gmail.com",
+    "url": "https://www.avivharuzi.com"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avivharuzi/eslint-config-vamp.git"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
+  }
+}
