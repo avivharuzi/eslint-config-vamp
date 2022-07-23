@@ -29,8 +29,8 @@ This package includes ESLint configuration files, this configuration files only 
 
 Currently, there is 2 configurations:
 
-1. `base` - The default one that includes ESLint rules only
-2. `typescript` - Include typescript/eslint rules only
+1. `base` - the default one that includes ESLint rules only
+2. `typescript` - includes typescript/eslint rules only
 
 ## 🛠️ Installation
 
@@ -42,7 +42,7 @@ npm i -D eslint-config-vamp
 
 ### base
 
-The base configuration required only `eslint` package to be installed.
+The base configuration requires only `eslint` package to be installed.
 
 > .eslintrc.json
 
@@ -75,7 +75,7 @@ Packages required:
 
 ### typescript
 
-The typescript configuration required those packages in order to work:
+The typescript configuration require those packages in order to work:
 
 - `eslint`
 - `@typescript-eslint/eslint-plugin`
@@ -114,6 +114,26 @@ Packages required:
     "vamp/typescript",
     "prettier"
   ]
+}
+```
+
+### Annoying Rules
+
+All the rules considered as best practices but some of them can make to your existing projects problems, so those rules can be disabled easily with the rules object:
+
+```json
+{
+  "rules": {
+    "id-denylist": "off",
+    "id-length": "off"
+    "max-classes-per-file": "off"
+    "max-depth": "off"
+    "max-lines": "off"
+    "max-lines-per-function": "off"
+    "max-nested-callbacks": "off"
+    "max-params": "off"
+    "max-statements": "off"
+  }
 }
 ```
 
