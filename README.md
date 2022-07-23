@@ -5,7 +5,7 @@
   <h1>eslint-config-vamp</h1>
   <p>ESLint config for vampires 🩸</p>
   <p>
-    <img alt="GitHub" src="https://img.shields.io/github/license/avivharuzi/eslint-config-vamp?style=for-the-badge">
+    <img alt="GitHub" src="https://img.shields.io/github/license/avivharuzi/eslint-config-vamp">
   </p>
   <p>
     <a href="https://github.com/avivharuzi/eslint-config-vamp/issues">Report Bug</a>
