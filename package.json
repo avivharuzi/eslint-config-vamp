@@ -24,6 +24,9 @@
     "url": "https://www.avivharuzi.com"
   },
   "main": "index.js",
+  "scripts": {
+    "publish:lib": "npm publish --access public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/avivharuzi/eslint-config-vamp.git"
