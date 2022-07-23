@@ -18,12 +18,12 @@
 
 ## 📖 Table of Contents
 
-- [Overview](#🛠️-Overview)
+- [Overview](#🔫-Overview)
 - [Installation](#🛠️-Installation)
 - [Usage](#⚡️-Usage)
 - [License](#📜-License)
 
-## Overview
+## 🔫 Overview
 
 This package includes ESLint configuration files, this configuration files only include rules to prevent environment problems and conflicts with other rules.
 
