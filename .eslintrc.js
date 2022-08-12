@@ -1,19 +1,32 @@
 module.exports = {
   rules: {
-    'array-callback-return': 'error',
+    'array-callback-return': [
+      'error',
+      {
+        checkForEach: true,
+      },
+    ],
     'no-constructor-return': 'error',
-    'no-duplicate-imports': 'error',
+    'no-duplicate-imports': [
+      'error',
+      {
+        includeExports: true,
+      },
+    ],
     'no-promise-executor-return': 'error',
-    'no-prototype-builtins': 'error',
     'no-self-compare': 'error',
     'no-template-curly-in-string': 'error',
-    'no-undef': 'error',
     'no-unmodified-loop-condition': 'error',
     'no-unreachable-loop': 'error',
     'no-unused-private-class-members': 'error',
-    'no-unused-vars': 'error',
     'no-use-before-define': 'error',
-    'arrow-body-style': 'error',
+    'arrow-body-style': [
+      'error',
+      'as-needed',
+      {
+        requireReturnForObjectLiteral: true,
+      },
+    ],
     camelcase: 'error',
     'capitalized-comments': ['error', 'always'],
     'class-methods-use-this': 'error',
@@ -33,35 +46,19 @@ module.exports = {
     'func-style': ['error', 'expression'],
     'grouped-accessor-pairs': ['error', 'setBeforeGet'],
     'guard-for-in': 'error',
-    'id-denylist': ['error', 'data', 'err', 'e', 'cb', 'callback'],
     'id-length': [
       'error',
       {
         min: 2,
+        properties: 'never',
+        exceptions: ['x', 'y', 'z'],
       },
     ],
     'init-declarations': ['error', 'always'],
-    'max-classes-per-file': 'error',
-    'max-depth': ['error', 2],
-    'max-lines': [
-      'error',
-      {
-        max: 400,
-        skipBlankLines: true,
-        skipComments: true,
-      },
-    ],
-    'max-lines-per-function': [
-      'error',
-      {
-        max: 75,
-        skipBlankLines: true,
-        skipComments: true,
-      },
-    ],
-    'max-nested-callbacks': ['error', 3],
+    'max-classes-per-file': ['error', 1],
+    'max-depth': ['error', 4],
+    'max-nested-callbacks': ['error', 4],
     'max-params': ['error', 3],
-    'max-statements': ['error', 10],
     'multiline-comment-style': ['error', 'starred-block'],
     'new-cap': [
       'error',
@@ -72,7 +69,6 @@ module.exports = {
     ],
     'no-alert': 'error',
     'no-array-constructor': 'error',
-    'no-case-declarations': 'error',
     'no-console': 'error',
     'no-else-return': [
       'error',
@@ -92,14 +88,6 @@ module.exports = {
     'no-lone-blocks': 'error',
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
-    'no-magic-numbers': [
-      'error',
-      {
-        ignore: [0, 1],
-        ignoreArrayIndexes: true,
-        ignoreDefaultValues: true,
-      },
-    ],
     'no-multi-assign': 'error',
     'no-multi-str': 'error',
     'no-negated-condition': 'error',
@@ -109,7 +97,6 @@ module.exports = {
     'no-new-object': 'error',
     'no-new-wrappers': 'error',
     'no-param-reassign': 'error',
-    'no-plusplus': 'error',
     'no-proto': 'error',
     'no-restricted-globals': 'error',
     'no-return-assign': ['error', 'always'],
@@ -123,6 +110,7 @@ module.exports = {
       'error',
       {
         allowAfterThis: true,
+        enforceInMethodNames: true,
       },
     ],
     'no-unneeded-ternary': 'error',
@@ -136,7 +124,6 @@ module.exports = {
     ],
     'no-useless-concat': 'error',
     'no-useless-constructor': 'error',
-    'no-useless-escape': 'error',
     'no-useless-rename': 'error',
     'no-useless-return': 'error',
     'no-var': 'error',
@@ -147,7 +134,13 @@ module.exports = {
     'operator-assignment': ['error', 'always'],
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
-    'prefer-destructuring': 'error',
+    'prefer-destructuring': [
+      'error',
+      {
+        array: false,
+        object: true,
+      },
+    ],
     'prefer-exponentiation-operator': 'error',
     'prefer-numeric-literals': 'error',
     'prefer-object-spread': 'error',
@@ -162,7 +155,6 @@ module.exports = {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     radix: 'error',
-    'require-await': 'error',
     'spaced-comment': [
       'error',
       'always',
@@ -180,6 +172,206 @@ module.exports = {
     ],
     'symbol-description': 'error',
     yoda: ['error', 'never'],
-    'template-curly-spacing': ['error', 'never'],
+    'line-comment-position': 'error',
+    'lines-between-class-members': 'error',
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: 'expression',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'expression',
+      },
+      {
+        blankLine: 'never',
+        prev: 'expression',
+        next: 'expression',
+      },
+      {
+        blankLine: 'always',
+        prev: 'multiline-expression',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'multiline-expression',
+      },
+      {
+        blankLine: 'always',
+        prev: 'cjs-export',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'cjs-export',
+      },
+      {
+        blankLine: 'always',
+        prev: 'cjs-import',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'cjs-import',
+      },
+      {
+        blankLine: 'never',
+        prev: 'cjs-import',
+        next: 'cjs-import',
+      },
+      {
+        blankLine: 'always',
+        prev: 'var',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'var',
+      },
+      {
+        blankLine: 'never',
+        prev: 'var',
+        next: 'var',
+      },
+      {
+        blankLine: 'always',
+        prev: 'multiline-var',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'multiline-var',
+      },
+      {
+        blankLine: 'always',
+        prev: 'let',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'let',
+      },
+      {
+        blankLine: 'never',
+        prev: 'let',
+        next: 'let',
+      },
+      {
+        blankLine: 'always',
+        prev: 'multiline-let',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'multiline-let',
+      },
+      {
+        blankLine: 'always',
+        prev: 'const',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'const',
+      },
+      {
+        blankLine: 'never',
+        prev: 'const',
+        next: 'const',
+      },
+      {
+        blankLine: 'always',
+        prev: 'multiline-const',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'multiline-const',
+      },
+      {
+        blankLine: 'always',
+        prev: 'class',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'class',
+      },
+      {
+        blankLine: 'always',
+        prev: 'export',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'export',
+      },
+      {
+        blankLine: 'always',
+        prev: 'block-like',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'block-like',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'break',
+      },
+      {
+        blankLine: 'never',
+        prev: '*',
+        next: 'case',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'continue',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'debugger',
+      },
+      {
+        blankLine: 'never',
+        prev: '*',
+        next: 'default',
+      },
+      {
+        blankLine: 'always',
+        prev: 'directive',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'directive',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'throw',
+      },
+      { blankLine: 'always', prev: '*', next: 'return' },
+    ],
   },
 };
