@@ -1,3 +1,76 @@
-const eslintrc = require('./.typescript.eslintrc');
-
-module.exports = eslintrc;
+module.exports = {
+  rules: {
+    '@typescript-eslint/array-type': [
+      'error',
+      {
+        default: 'array',
+      },
+    ],
+    '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
+    '@typescript-eslint/consistent-generic-constructors': [
+      'error',
+      'constructor',
+    ],
+    '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/explicit-member-accessibility': [
+      'error',
+      {
+        accessibility: 'no-public',
+      },
+    ],
+    '@typescript-eslint/method-signature-style': ['error', 'property'],
+    '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+    '@typescript-eslint/no-dynamic-delete': 'error',
+    '@typescript-eslint/no-duplicate-enum-values': 'error',
+    '@typescript-eslint/no-invalid-void-type': 'error',
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
+    '@typescript-eslint/no-require-imports': 'error',
+    '@typescript-eslint/no-useless-empty-export': 'error',
+    '@typescript-eslint/prefer-enum-initializers': 'error',
+    '@typescript-eslint/prefer-for-of': 'error',
+    '@typescript-eslint/prefer-function-type': 'error',
+    '@typescript-eslint/prefer-literal-enum-member': 'error',
+    '@typescript-eslint/prefer-optional-chain': 'error',
+    '@typescript-eslint/sort-type-union-intersection-members': 'error',
+    '@typescript-eslint/unified-signatures': 'error',
+    'default-param-last': 'off',
+    '@typescript-eslint/default-param-last': 'error',
+    'init-declarations': 'off',
+    '@typescript-eslint/init-declarations': ['error', 'always'],
+    'lines-between-class-members': 'off',
+    '@typescript-eslint/lines-between-class-members': 'error',
+    'no-loop-func': 'off',
+    '@typescript-eslint/no-loop-func': 'error',
+    'no-unused-expressions': 'off',
+    '@typescript-eslint/no-unused-expressions': 'error',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'error',
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error',
+    '@typescript-eslint/padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: 'interface',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'interface',
+      },
+      {
+        blankLine: 'always',
+        prev: 'type',
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'type',
+      },
+    ],
+  },
+};

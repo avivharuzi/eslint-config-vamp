@@ -29,7 +29,7 @@ This package includes ESLint configuration files, this configuration files only 
 
 Currently, there is 2 configurations:
 
-1. `base` - the default one that includes ESLint rules only
+1. `javascript` - the default one that includes ESLint rules only
 2. `typescript` - includes typescript/eslint rules only
 
 ## 🛠️ Installation
@@ -40,21 +40,21 @@ npm i -D eslint-config-vamp
 
 ## ⚡️ Usage
 
-### base
+### javascript
 
-The base configuration requires only `eslint` package to be installed.
+The javascript configuration requires only `eslint` package to be installed.
 
 > .eslintrc.json
 
 ```json
 {
   "extends": [
-    "vamp"
+    "vamp/javascript"
   ]
 }
 ```
 
-Example of advanced configuration with `base`:
+Example of advanced configuration with `javascript`:
 
 Packages required:
 
@@ -67,7 +67,7 @@ Packages required:
 {
   "extends": [
     "eslint:recommended",
-    "vamp",
+    "vamp/javascript",
     "prettier"
   ]
 }
@@ -86,7 +86,7 @@ The typescript configuration require those packages in order to work:
 ```json
 {
   "extends": [
-    "vamp",
+    "vamp/javascript",
     "vamp/typescript"
   ]
 }
@@ -107,10 +107,8 @@ Packages required:
 {
   "extends": [
     "eslint:recommended",
+    "vamp/javascript",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:@typescript-eslint/strict",
-    "vamp",
     "vamp/typescript",
     "prettier"
   ]
@@ -124,15 +122,11 @@ All the rules considered as best practices but some of them can make to your exi
 ```json
 {
   "rules": {
-    "id-denylist": "off",
-    "id-length": "off"
-    "max-classes-per-file": "off"
-    "max-depth": "off"
-    "max-lines": "off"
-    "max-lines-per-function": "off"
-    "max-nested-callbacks": "off"
+    "id-length": "off",
+    "max-classes-per-file": "off",
+    "max-depth": "off",
+    "max-nested-callbacks": "off",
     "max-params": "off"
-    "max-statements": "off"
   }
 }
 ```
